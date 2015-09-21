@@ -4,7 +4,8 @@ import os
 import time
 from random import shuffle
 
-pictures_path = '/Users/max/Pictures'
+username = 'INSERT USERNAME HERE'
+pictures_path = '/Users/<u>/Pictures'.format(u=username)
 earthporn_url = 'https://www.reddit.com/r/EarthPorn/new.json?raw_json=1'
 art_url = 'https://www.reddit.com/r/art/new.json?raw_json=1'
 pics_url = 'https://www.reddit.com/r/pics/new.json?raw_json=1'
