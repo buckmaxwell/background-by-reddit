@@ -3,19 +3,15 @@ import urllib
 import os
 import time
 from random import shuffle
+from config import subreddit1, subreddit2, subreddit3, pictures_path
 
-username = 'INSERT USERNAME HERE'
-pictures_path = '/Users/<u>/Pictures'.format(u=username)
-earthporn_url = 'https://www.reddit.com/r/EarthPorn/new.json?raw_json=1'
-art_url = 'https://www.reddit.com/r/art/new.json?raw_json=1'
-pics_url = 'https://www.reddit.com/r/pics/new.json?raw_json=1'
 
 headers = {'User-Agent': 'backgroundbyreddit:v1.0.0 (by /u/wormywormm)'}
-e_resp = requests.get(earthporn_url, headers=headers)
+e_resp = requests.get('https://www.reddit.com{s1}/new.json?raw_json=1'.format(s1=subreddit1), headers=headers)
 time.sleep(2)
-a_resp = requests.get(art_url, headers=headers)
+a_resp = requests.get('https://www.reddit.com{s2}/new.json?raw_json=1'.format(s2=subreddit2), headers=headers)
 time.sleep(2)
-p_resp = requests.get(pics_url, headers=headers)
+p_resp = requests.get('https://www.reddit.com{s3}/new.json?raw_json=1'.format(s3=subreddit3), headers=headers)
 
 
 
