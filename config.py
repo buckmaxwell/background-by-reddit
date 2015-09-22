@@ -4,7 +4,8 @@
 ###
 
 username = 'max' # => insert your personal computer username here
-pictures_path = '/Users/{u}/Pictures'.format(u=username) # => all pictures in this path will be deleted
+pictures_path = '/Users/{u}/BackgroundByReddit'.format(u=username) # => all pictures in this path will be deleted
+
 
 ###
 # Configure subreddits 1-3 with your favorite picture heavy subreddits

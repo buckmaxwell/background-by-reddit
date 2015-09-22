@@ -14,10 +14,10 @@ time.sleep(2)
 p_resp = requests.get('https://www.reddit.com{s3}/new.json?raw_json=1'.format(s3=subreddit3), headers=headers)
 
 
-
 # Remove existing children except default.
 pics = os.listdir(pictures_path)
-pics_to_delete = [pic for pic in pics if pic[0] != '.' and pic!='default.jpg']
+pics_to_delete = [pic for pic in pics if pic[0] != '.']
+pics_to_delete.pop() # keep one picture so the directory is never empty
 for p in pics_to_delete:
 	os.remove('{path}/{filename}'.format(path=pictures_path, filename=p))
 

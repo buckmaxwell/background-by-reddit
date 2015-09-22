@@ -1,25 +1,28 @@
 # BackgroundByReddit
 
-## Installation (Mac)
+## Installation
 
-**Important.  All photos the ~/Pictures folder will be deleted.  Please move photos you care about to another location before using.** 
-
-### 1. Clone the repo and install requirements
+### 1. Clone the repo, install requirements, make BackgroundByReddit folder
 ```sh
 $ git clone https://github.com/buckmaxwell/background-by-reddit.git
+$
 $ cd background-by-reddit
 $ pip install -r requirements.txt
+$
+$ mkdir ~/BackgroundByReddit
+$ mv default.jpg ~/BackgroundByReddit
+$ 
 ```
+
 ### 2. Configure your settings
 open config.py in your text editor of choice and configure your settings!
 ```python
 ###
-# Mac: Fill out your username
-# Others: Make sure the path to the folder is correct
+# Fill out your username, if not on Mac make sure the path to BackgroundByReddit is correct -- do not use ~/
 ###
 
 username = 'max' # => insert your personal computer username here
-pictures_path = '/Users/{u}/Pictures'.format(u=username) # => all pictures in this path will be deleted
+pictures_path = '/Users/{u}/BackgroundByReddit'.format(u=username) # => all pictures in this path will be deleted
 
 ###
 # Configure subreddits 1-3 with your favorite picture heavy subreddits
@@ -61,33 +64,10 @@ This final command will open the crontab, presumably in vim.
  3. press 'esc'
  4. type 'ZZ'
 
-### 4. Configure settings for background
+### 4. Configure settings for background (this process will vary slightly for diffent Operating Systems)
 
  1. Right click on desktop background
  2. Select "change desktop background"
- 3. Under folders select Pictures
- 4. Select the first and click "Change Picture"
- 5. Set drop down menu to "5 seconds"
- 6. Add a photo or rename a picture in the ~/Picture folder to 'default.jpg'
- 
-
-## Installation (Linux)
-
-### Clone the repository and install the crontab
-
-**Important.  All photos the pictures_path folder will be deleted.  Please move photos you care about to another location before using.** 
-
-For the most part the Mac steps should work. But do the following.  In redditbackground.py change pictures_path = '/Users/\<u>/Pictures' to your local picture folder path.
-
-### 1. 
-Same as Mac.
-
-### 2. 
-Make sure you get the correct path to the folder.  See the comments in config.py.
-### 3. 
-Same as Mac.
-
-### 4. 
-
-You gotta figure this out on your own.  If someone does it, please let me know your steps!
-
+ 3. Under folders select BackgroundByReddit -- if this is not there by default add the folder by clicking the + sign
+ 4. Select the first picture and click "Change Picture"
+ 5. Set drop down menu to "5 seconds" 
