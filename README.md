@@ -10,12 +10,40 @@ $ git clone https://github.com/buckmaxwell/background-by-reddit.git
 $ cd background-by-reddit
 $ pip install -r requirements.txt
 ```
-### 2. Add your username
-open reddit background.py in your text editor of choice change 
+### 2. Configure your settings
+open config.py in your text editor of choice and configure your settings!
 ```python
-username = 'INSERT USERNAME HERE'
+###
+# Mac: Fill out your username
+# Others: Make sure the path to the folder is correct
+###
+
+username = 'max' # => insert your personal computer username here
+pictures_path = '/Users/{u}/Pictures'.format(u=username) # => all pictures in this path will be deleted
+
+###
+# Configure subreddits 1-3 with your favorite picture heavy subreddits
+#
+# Suggestions:
+#	/r/earthporn
+#	/r/pics
+#	/r/carporn
+#	/r/teacuppigs
+#	/r/bookporn
+# 	/r/matureladiesboners
+#   /r/wallpaper
+#	/r/art
+#	/r/pics
+#
+# Get creative!
+#
+###
+
+
+subreddit1 = '/r/wallpaper' 
+subreddit2 = '/r/art'
+subreddit3 = '/r/pics'
 ```
-to your username.
 
 ### 3. Edit the crontab
 
@@ -55,26 +83,11 @@ For the most part the Mac steps should work. But do the following.  In redditbac
 Same as Mac.
 
 ### 2. 
-open reddit background.py in your text editor of choice change 
-
-```python
-pictures_path = '/Users/<u>/Pictures'.format(u=username)
-```
-to
-```python
-pictures_path = '/Whatever/path/you/want'
-```
-
+Make sure you get the correct path to the folder.  See the comments in config.py.
 ### 3. 
-
 Same as Mac.
 
 ### 4. 
 
 You gotta figure this out on your own.  If someone does it, please let me know your steps!
- 
-
-
-
-
 
