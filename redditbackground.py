@@ -1,5 +1,5 @@
 import requests
-import urllib
+import urllib.request
 import os
 import time
 from random import shuffle
@@ -33,6 +33,6 @@ for child in the_children:
     name_of_local_file = f"{pictures_path}/{pid}.{extention}"
     try:
         if not "com" in extention and len(extention) <= 4:
-            urllib.urlretrieve(link, name_of_local_file)
+            urllib.request.urlretrieve(link, name_of_local_file)
     except Exception as e:  # sometimes the extention is not present, wrong, or wack
         print(e)
